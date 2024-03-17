@@ -1,3 +1,11 @@
+CREATE TABLE IF NOT EXISTS paziente (
+  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  cognome VARCHAR(50) NOT NULL,
+  sesso ENUM('M','F') NOT NULL,
+  eta INT(11) NOT NULL
+);
+
 INSERT INTO paziente (id, nome, cognome, sesso, eta)
 VALUES
   (1, 'Zena', 'Challender', 'F', 19),

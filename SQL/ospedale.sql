@@ -1,3 +1,10 @@
+CREATE TABLE IF NOT EXISTS ospedale (
+  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  regione VARCHAR(50) NOT NULL,
+  provincia VARCHAR(50) NOT NULL
+);
+
 INSERT INTO ospedale (id, nome, regione, provincia)
 VALUES
   (1, 'Ospedale San Giovanni', 'Lombardia', 'Milano'),

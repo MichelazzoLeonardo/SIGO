@@ -1,3 +1,10 @@
+CREATE TABLE IF NOT EXISTS appuntamento (
+  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  idMedico INT(11) NOT NULL,
+  idPaziente INT(11) NOT NULL,
+  dataOra DATETIME NOT NULL
+);
+
 INSERT INTO appuntamento (id, idMedico, idPaziente, dataOra)
 VALUES
   (1, 292, 272, '2024-12-24 08:00:00'),

@@ -1,3 +1,13 @@
+CREATE TABLE IF NOT EXISTS medico (
+  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  idOspedale INT(11) NOT NULL,
+  nome VARCHAR(50) NOT NULL,
+  cognome VARCHAR(50) NOT NULL,
+  specializzazione ENUM('oncologia','allergologia','dermatologia','ematologia','reumatologia','neurologia','psichiatria','pediatria','chirurgia','ginecologia','ortopedia','urologia','cardiologia','radiologia','farmacologia','infermieristica') NOT NULL,
+  turno ENUM('giorno','notte'),
+  FOREIGN KEY (idOspedale) REFERENCES ospedale(id)
+);
+
 INSERT INTO medico (id, idOspedale, nome, cognome, specializzazione, turno)
 VALUES
   (1, 7, 'Edmon', 'Ivimey', 'ginecologia', 'notte'),
